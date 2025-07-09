@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: fastmcp
-  version: "2.10.2"
+  version: "2.10.4"
   python_min: '3.10'
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastmcp-${{ version }}.tar.gz
-  sha256: 1ad519fda8bfde1de7f54a7ed4be0b6353eb66230cc1e35eef29b47666a0027b
+  sha256: 49c6de71fa2f7132af4592f278e003e83b86b15a187a26cf2502bf3dce8155ba
 
 build:
   number: 0
@@ -33,12 +33,15 @@ requirements:
     - python-dotenv >=1.1.0
     - exceptiongroup >=1.2.2
     - httpx >=0.28.1
-    - mcp >=1.8.1,<2.0.0
+    - mcp >=1.10.0
     - openapi-pydantic >=0.5.1
     - rich >=13.9.4
-    - typer >=0.15.2
-    - websockets >=14.0
+    #- typer >=0.15.2
+    #- websockets >=14.0
+    - cyclopts >=3.0.0
     - authlib >=1.5.2
+    - pydantic >=2.11.7
+    - pyperclip >=1.9.0
 
 tests:
   - python:
