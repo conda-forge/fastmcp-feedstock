@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: fastmcp
-  version: "2.12.3"
+  version: "2.12.4"
   python_min: '3.10'
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastmcp-${{ version }}.tar.gz
-  sha256: 541dd569d5b6c083140b04d997ba3dc47f7c10695cee700d0a733ce63b20bb65
+  sha256: b55fe89537038f19d0f4476544f9ca5ac171033f61811cc8f12bdeadcbea5016
 
 build:
   number: 0
