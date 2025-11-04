@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: fastmcp
-  version: "2.12.5"
+  version: "2.13.0.2"
   python_min: '3.10'
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastmcp-${{ version }}.tar.gz
-  sha256: 2dfd02e255705a4afe43d26caddbc864563036e233dbc6870f389ee523b39a6a
+  sha256: d35386561b6f3cde195ba2b5892dc89b8919a721e6b39b98e7a16f9a7c0b8e8b
 
 build:
   number: 0
@@ -33,17 +33,26 @@ requirements:
     - python-dotenv >=1.1.0
     - exceptiongroup >=1.2.2
     - httpx >=0.28.1
-    - mcp >=1.12.4,<1.17.0
+    - mcp >=1.17.0,<2.0.0
     - openapi-pydantic >=0.5.1
+    - platformdirs >=4.0.0
     - rich >=13.9.4
-    #- typer >=0.15.2
-    #- websockets >=14.0
     - cyclopts >=3.0.0
     - authlib >=1.5.2
     - pydantic >=2.11.7
     - pyperclip >=1.9.0
-    - openapi-core >=0.19.5
-    - openai >=1.95.1
+    - py-key-value-aio >=0.2.8,<0.3.0
+    - websockets >=15.0.1
+    - jsonschema-path >=0.3.4
+    # py-key-value-aio[disk]
+    - diskcache >=5.6.0
+    - pathvalidate >=3.3.1
+    # py-key-value-aio[memory]
+    - cachetools >=6.0.0
+    # py-key-value-aio[keyring]
+    - keyring >=25.6.0
+    # optional
+    - openai >=1.102.0
 
 tests:
   - python:
@@ -66,3 +75,4 @@ about:
 extra:
   recipe-maintainers:
     - rxm7706
+    - dbast
