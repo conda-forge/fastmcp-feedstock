@@ -52,7 +52,7 @@ requirements:
     - cachetools >=6.0.0
     # py-key-value-aio[keyring]
     - keyring >=25.6.0
-  run_constrained:
+  run_constraints:
     - openai >=1.102.0
 
 tests:
