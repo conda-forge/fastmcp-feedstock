@@ -51,11 +51,11 @@ requirements:
     - pyyaml >=6.0,<7.0
     - jsonref >=1.1.0
     - watchfiles >=1.0.0
-    # py-key-value-aio[disk]
-    - diskcache >=5.6.0
-    - pathvalidate >=3.3.1
+    # py-key-value-aio[filetree]
+    - aiofile >=3.5.0
+    - anyio >=4.4.0
     # py-key-value-aio[memory]
-    - cachetools >=6.0.0
+    - cachetools >=5.0.0
     # py-key-value-aio[keyring]
     - keyring >=25.6.0
   run_constraints:
