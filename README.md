@@ -7,7 +7,7 @@ Home: https://github.com/jlowin/fastmcp
 
 Package license: Apache-2.0
 
-Summary: The fast, Pythonic way to build MCP servers.
+Summary: The fast, Pythonic way to build MCP servers and clients.
 
 Current build status
 ====================
