@@ -2,96 +2,102 @@
 schema_version: 1
 
 context:
-  name: fastmcp
-  version: "3.1.0"
-  python_min: '3.10'
+    name: fastmcp
+    version: "3.2.4"
 
 package:
-  name: ${{ name|lower }}
-  version: ${{ version }}
+    name: ${{ name|lower }}
+    version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastmcp-${{ version }}.tar.gz
-  sha256: e25264794c734b9977502a51466961eeecff92a0c2f3b49c40c070993628d6d0
+    url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastmcp-${{ version }}.tar.gz
+    sha256: 083ecb75b44a4169e7fc0f632f94b781bdb0ff877c6b35b9877cbb566fd4d4d1
 
 build:
-  number: 1
-  noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  python:
-    entry_points:
-      - fastmcp = fastmcp.cli:app
+    number: 0
+    noarch: python
+    script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    python:
+        entry_points:
+            - fastmcp = fastmcp.cli:app
 
 requirements:
-  host:
-    - python ${{ python_min }}.*
-    - hatchling
-    - uv-dynamic-versioning >=0.7.0
-    - pip
-  run:
-    - python >=${{ python_min }},<4
-    - python-dotenv >=1.1.0
-    - exceptiongroup >=1.2.2
-    - httpx >=0.28.1,<1.0
-    - mcp >=1.24.0,<2.0
-    - openapi-pydantic >=0.5.1
-    - opentelemetry-api >=1.20.0
-    - packaging >=24.0
-    - platformdirs >=4.0.0
-    - rich >=13.9.4
-    - cyclopts >=4.0.0
-    - authlib >=1.6.5
-    - pydantic >=2.11.7
-    # "pydantic[email]>=2.11.7",
-    # https://github.com/jlowin/fastmcp/blob/v2.13.0/pyproject.toml#L16
-    # https://github.com/pydantic/pydantic/blob/main/pyproject.toml#L56
-    - email-validator >=2.0.0
-    - pyyaml >=6.0,<7.0
-    - pyperclip >=1.9.0
-    - py-key-value-aio >=0.4.4,<0.5.0
-    # "py-key-value-aio[filetree,keyring,memory]>=0.2.6,<0.3.0",
-    # https://github.com/PrefectHQ/fastmcp/blob/v3.0.2/pyproject.toml#L21
-    # https://github.com/strawgate/py-key-value/blob/main/pyproject.toml#L33
-    - aiofile >=3.5.0
-    - anyio >=4.4.0
-    # py-key-value-aio[memory]
-    # https://github.com/strawgate/py-key-value/blob/main/pyproject.toml#L31
-    - cachetools >=5.0.0
-    # py-key-value-aio[keyring]
-    # https://github.com/strawgate/py-key-value/blob/main/pyproject.toml#L43
-    - keyring >=25.6.0
-    - uvicorn >=0.35
-    - websockets >=15.0.1
-    - jsonschema-path >=0.3.4
-    - jsonref >=1.1.0
-    - uncalled-for >=0.2.0
-    - watchfiles >=1.0.0
-  run_constraints:
-    - openai >=1.102.0
-    - anthropic >=0.40.0
-    - azure-identity >=1.16.0
-    - pydocket >=0.17.2
+    host:
+        - python ${{ python_min }}.*
+        - hatchling
+        - uv-dynamic-versioning >=0.7.0
+        - pip
+    run:
+        - python >=${{ python_min }},<4
+        - authlib >=1.6.5
+        - cyclopts >=4.0.0
+        - exceptiongroup >=1.2.2
+        - griffelib >=2.0.0
+        - httpx >=0.28.1,<1.0
+        - joserfc
+        - mcp >=1.24.0,<2.0
+        - openapi-pydantic >=0.5.1
+        - opentelemetry-api >=1.20.0
+        - packaging >=24.0
+        - platformdirs >=4.0.0
+        - rich >=13.9.4
+        - pydantic >=2.11.7
+        # "pydantic[email]>=2.11.7",
+        # https://github.com/jlowin/fastmcp/blob/v2.13.0/pyproject.toml#L16
+        # https://github.com/pydantic/pydantic/blob/main/pyproject.toml#L56
+        - email-validator >=2.0.0
+        - pyyaml >=6.0,<7.0
+        - pyperclip >=1.9.0
+        - python-dotenv >=1.1.0
+        - py-key-value-aio >=0.4.4,<0.5.0
+        # "py-key-value-aio[filetree,keyring,memory]>=0.2.6,<0.3.0",
+        # https://github.com/PrefectHQ/fastmcp/blob/v3.0.2/pyproject.toml#L21
+        # https://github.com/strawgate/py-key-value/blob/main/pyproject.toml#L33
+        - aiofile >=3.5.0
+        - anyio >=4.4.0
+        # py-key-value-aio[memory]
+        # https://github.com/strawgate/py-key-value/blob/main/pyproject.toml#L31
+        - cachetools >=5.0.0
+        # py-key-value-aio[keyring]
+        # https://github.com/strawgate/py-key-value/blob/main/pyproject.toml#L43
+        - keyring >=25.6.0
+        - uvicorn >=0.35
+        - websockets >=15.0.1
+        - jsonschema-path >=0.3.4
+        - jsonref >=1.1.0
+        - uncalled-for >=0.2.0
+        - watchfiles >=1.0.0
+    run_constraints:
+        - openai >=1.102.0
+        - anthropic >=0.48.0
+        - azure-identity >=1.16.0
+        - google-genai >=1.18.0
+        - prefab-ui >=0.18.0
+        - pydocket >=0.19.0
+        - pydantic-monty ==0.0.11
+        - pyjwt >=2.12.0
 
 tests:
-  - python:
-      imports:
-        - fastmcp
-      pip_check: true
-      python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - python ${{ python_min }}.*
-        - pip
-    script:
-      - fastmcp --help
+    - python:
+          imports:
+              - fastmcp
+          pip_check: true
+          python_version: ${{ python_min }}.*
+    - requirements:
+          run:
+              - python ${{ python_min }}.*
+              - pip
+      script:
+          - fastmcp --help
 
 about:
-  summary: The fast, Pythonic way to build MCP servers and clients.
-  homepage: https://github.com/jlowin/fastmcp
-  license: Apache-2.0
-  license_file: LICENSE
+    summary: The fast, Pythonic way to build MCP servers and clients.
+    homepage: https://github.com/jlowin/fastmcp
+    license: Apache-2.0
+    license_file: LICENSE
 
 extra:
-  recipe-maintainers:
-    - rxm7706
-    - dbast
+    recipe-maintainers:
+        - rxm7706
+        - dbast
+        - moritzwilksch
