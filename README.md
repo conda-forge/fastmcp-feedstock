@@ -143,5 +143,6 @@ Feedstock Maintainers
 =====================
 
 * [@dbast](https://github.com/dbast/)
+* [@moritzwilksch](https://github.com/moritzwilksch/)
 * [@rxm7706](https://github.com/rxm7706/)
 
