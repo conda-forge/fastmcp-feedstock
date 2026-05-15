@@ -3,11 +3,15 @@ About fastmcp-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fastmcp-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jlowin/fastmcp
+Home: https://gofastmcp.com/
 
 Package license: Apache-2.0
 
 Summary: The fast, Pythonic way to build MCP servers and clients.
+
+Development: https://github.com/PrefectHQ/fastmcp
+
+Documentation: https://gofastmcp.com/
 
 Current build status
 ====================
