@@ -3,11 +3,32 @@ About fastmcp-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fastmcp-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jlowin/fastmcp
+
+About fastmcp
+-------------
+
+Home: https://gofastmcp.com/
 
 Package license: Apache-2.0
 
 Summary: The fast, Pythonic way to build MCP servers and clients.
+
+Development: https://github.com/PrefectHQ/fastmcp
+
+Documentation: https://gofastmcp.com/
+
+About fastmcp-slim
+------------------
+
+Home: https://gofastmcp.com/
+
+Package license: Apache-2.0
+
+Summary: The dependency-slim FastMCP package.
+
+Development: https://github.com/PrefectHQ/fastmcp
+
+Documentation: https://gofastmcp.com/
 
 Current build status
 ====================
@@ -27,6 +48,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-fastmcp-green.svg)](https://anaconda.org/conda-forge/fastmcp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/fastmcp.svg)](https://anaconda.org/conda-forge/fastmcp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/fastmcp.svg)](https://anaconda.org/conda-forge/fastmcp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/fastmcp.svg)](https://anaconda.org/conda-forge/fastmcp) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-fastmcp--slim-green.svg)](https://anaconda.org/conda-forge/fastmcp-slim) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/fastmcp-slim.svg)](https://anaconda.org/conda-forge/fastmcp-slim) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/fastmcp-slim.svg)](https://anaconda.org/conda-forge/fastmcp-slim) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/fastmcp-slim.svg)](https://anaconda.org/conda-forge/fastmcp-slim) |
 
 Installing fastmcp
 ==================
@@ -38,16 +60,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `fastmcp` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `fastmcp, fastmcp-slim` can be installed with `conda`:
 
 ```
-conda install fastmcp
+conda install fastmcp fastmcp-slim
 ```
 
 or with `mamba`:
 
 ```
-mamba install fastmcp
+mamba install fastmcp fastmcp-slim
 ```
 
 It is possible to list all of the versions of `fastmcp` available on your platform with `conda`:
