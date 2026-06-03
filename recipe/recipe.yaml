@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: fastmcp
-  version: "3.3.1"
+  version: "3.4.0"
 
 recipe:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastmcp-${{ version }}.tar.gz
-    sha256: 979362ea557de42a5f40342563c7e4b236bcc8e7cd192715f50030695d1a71cd
+    sha256: 29055fb6816f4862c615aabaf0112ae8feb8b469740db13403a0ce5b799ec1dc
     target_directory: fastmcp/
   - url: https://pypi.org/packages/source/${{ name[0] }}/fastmcp-slim/fastmcp_slim-${{ version }}.tar.gz
-    sha256: 0957835fc59452e143ab2f4b7836d2d2df9b2d9958408edc79ba8b56232b2a88
+    sha256: faa0ccf16e85ec4b9f79c006fed3546b866d7e6dba3f60cd32cd98e84753a496
     target_directory: fastmcp-slim/
 
 build:
