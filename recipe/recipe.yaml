@@ -41,6 +41,7 @@ outputs:
       run:
         - python >=${{ python_min }},<4
         - email-validator >=2.0.0
+        - mcp-types >=2.0.0,<3.0.0
         - platformdirs >=4.0.0
         - pydantic >=2.12.0
         - pydantic-settings >=2.0.0
